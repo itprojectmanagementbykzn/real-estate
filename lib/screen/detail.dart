@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kozarni_appointment/model/expert.dart';
-import 'package:kozarni_appointment/routes/routes.dart';
 import 'package:kozarni_appointment/screen/booking.dart';
 
 class DetailPage extends StatelessWidget {
@@ -13,6 +12,7 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Stack(
@@ -22,7 +22,9 @@ class DetailPage extends StatelessWidget {
               width: double.infinity,
               height: 250,
               fit: BoxFit.cover,
+
             ),
+
             Positioned(
               left: 0,
               child: SafeArea(
@@ -53,7 +55,7 @@ class DetailPage extends StatelessWidget {
                     Text(
                       expertModel.type,
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 17,
                       ),
                     ),
                     SizedBox(
@@ -75,33 +77,33 @@ class DetailPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "JObs",
+                                "📐 Area",
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.grey,
                                 ),
                               ),
                               SizedBox(
                                 height: 5,
-                              ),
-                              Text(
+                              ),Text(
                                 expertModel.job,
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
                                 ),
                               ),
+
                             ],
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Rate",
+                                "💰 Price",
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.grey,
                                 ),
@@ -112,7 +114,7 @@ class DetailPage extends StatelessWidget {
                               Text(
                                 expertModel.rate,
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
                                 ),
@@ -123,9 +125,9 @@ class DetailPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Rating",
+                                "🛏️ BedRoom",
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.grey,
                                 ),
@@ -136,35 +138,105 @@ class DetailPage extends StatelessWidget {
                               Text(
                                 expertModel.rating,
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
                                 ),
                               ),
                             ],
                           ),
+
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "🛀 BathRoom",
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                expertModel.rating2,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+
                         ],
                       ),
                     ),
                     Text(
-                      "What does this service include?",
+                      "🚌  Address",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                     ),
+                    Text(expertModel.propertyAddress),
                     SizedBox(
                       height: 20,
                     ),
+
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 30),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: CachedNetworkImage(
+                              imageUrl: expertModel.photolink2,
+                              width: 120,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("👪 Facilities များ", style: TextStyle(fontSize: 16,
+                                  fontWeight: FontWeight.bold),),
+                              Text(expertModel.jobTitle),
+                              // SizedBox(
+                              //   height: 10,
+                              // ),
+                              // Text(
+                              //   expertModel.jobDescription,
+                              //   maxLines: 20,
+                              //   overflow: TextOverflow.ellipsis,
+                              // ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ],
+                    ),
+
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(8),
                           child: CachedNetworkImage(
-                            imageUrl: expertModel.photolink,
-                            width: 100,
+                            imageUrl: expertModel.photolink3,
+                            width: 120,
                             height: 100,
                             fit: BoxFit.cover,
                           ),
@@ -176,13 +248,13 @@ class DetailPage extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(expertModel.jobTitle),
-                              SizedBox(
-                                height: 10,
-                              ),
+                              // Text(expertModel.jobTitle),
+                              // SizedBox(
+                              //   height: 10,
+                              // ),
                               Text(
                                 expertModel.jobDescription,
-                                maxLines: 4,
+                                maxLines: 20,
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ],
@@ -192,7 +264,9 @@ class DetailPage extends StatelessWidget {
                           width: 10,
                         ),
                       ],
-                    )
+                    ),
+
+
                   ],
                 ),
               ),
@@ -212,7 +286,7 @@ class DetailPage extends StatelessWidget {
           color: Colors.blue,
           alignment: Alignment.center,
           child: Text(
-            "Book Now",
+            "Rent Now",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,

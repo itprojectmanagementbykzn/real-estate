@@ -21,7 +21,7 @@ class PurchasePage extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Puchase History",
+          "Booking History",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -56,14 +56,14 @@ class PurchasePage extends StatelessWidget {
                         hander(false);
                         Get.defaultDialog(
                             radius: 0,
-                            title: 'Info',
+                            title: 'Booking Detail',
                             content: Column(
                               children: [
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Date"),
+                                    // Text("Date"),
                                     Text(_home.getPurchase()[i].dateTime),
                                   ],
                                 ),
@@ -74,7 +74,7 @@ class PurchasePage extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Time"),
+                                    // Text("Time"),
                                     Text(_home.getPurchase()[i].timeOfDay),
                                   ],
                                 ),
@@ -85,7 +85,7 @@ class PurchasePage extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Expert Name"),
+                                    // Text("Expert Name"),
                                     Text(_home
                                         .getExpert(
                                             _home.getPurchase()[i].expertId)
@@ -99,7 +99,7 @@ class PurchasePage extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Expert Rate"),
+                                    // Text("Expert Rate"),
                                     Text(_home
                                         .getExpert(
                                             _home.getPurchase()[i].expertId)
@@ -113,7 +113,7 @@ class PurchasePage extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Username"),
+                                    // Text("Username"),
                                     Text(_home.getPurchase()[i].username),
                                   ],
                                 ),
@@ -124,7 +124,7 @@ class PurchasePage extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Phone"),
+                                    // Text("Phone"),
                                     Text(_home.getPurchase()[i].phone),
                                   ],
                                 ),
@@ -135,7 +135,7 @@ class PurchasePage extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Address"),
+                                    // Text("Email"),
                                     Text(_home.getPurchase()[i].address),
                                   ],
                                 ),

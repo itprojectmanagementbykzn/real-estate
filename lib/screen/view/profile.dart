@@ -27,13 +27,14 @@ class LogoutUser extends GetView<HomeController> {
         SizedBox(
           height: 50,
         ),
-        FlutterLogo(
-          size: 100,
-          style: FlutterLogoStyle.stacked,
-        ),
-        SizedBox(
-          height: 50,
-        ),
+    Padding(
+      padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10),
+      child: CachedNetworkImage(
+      imageUrl:
+      'https://i.ibb.co/TkLNSby/app-icon.png',
+        height: 120,
+      ),
+    ),
         Padding(
           padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
           child: Obx(
@@ -46,7 +47,7 @@ class LogoutUser extends GetView<HomeController> {
                 border: OutlineInputBorder(),
                 hintText: controller.phoneState.value
                     ? 'Enter your code'
-                    : 'Phone Number(+9599***)',
+                    : 'Phone Number(+959***)',
               ),
             ),
           ),
@@ -54,7 +55,7 @@ class LogoutUser extends GetView<HomeController> {
         Container(
           width: double.infinity,
           height: 50,
-          margin: const EdgeInsets.only(top: 20, right: 20, left: 20),
+          margin: const EdgeInsets.only(top: 30, right: 20, left: 20),
           child: Obx(
             () => ElevatedButton(
               style: ButtonStyle(
@@ -90,13 +91,12 @@ class _LoginUser extends StatelessWidget {
             child: Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  padding: const EdgeInsets.only(left: 20, right: 50),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
+                    // borderRadius: BorderRadius.circular(100),
                     child: CachedNetworkImage(
                       imageUrl:
-                          'https://images.theconversation.com/files/410786/original/file-20210712-70807-bxgarp.png?ixlib=rb-1.1.0&rect=0%2C60%2C1917%2C957&q=45&auto=format&w=668&h=324&fit=crop',
-                      width: 100,
+                          'https://i.ibb.co/TkLNSby/app-icon.png',
                       height: 100,
                       fit: BoxFit.cover,
                     ),
@@ -189,7 +189,7 @@ class _AdminPanel extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Create Expert"),
+                    Text("Create New Rent"),
                     Icon(Icons.upload),
                   ],
                 ),
@@ -213,7 +213,7 @@ class _AdminPanel extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Manage Expert"),
+                    Text("Manage Rents"),
                     Icon(Icons.edit),
                   ],
                 ),
@@ -237,7 +237,7 @@ class _AdminPanel extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Purchase"),
+                    Text("Appointments"),
                     Icon(Icons.shop),
                   ],
                 ),

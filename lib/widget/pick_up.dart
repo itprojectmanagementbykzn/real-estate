@@ -68,9 +68,9 @@ class PickUp extends StatelessWidget {
                 bottom: 20,
                 child: Row(
                   children: List.generate(
-                    _home.getByType('doctor').length > 5
+                    _home.getByType('South Oakalarpa').length > 5
                         ? 5
-                        : _home.getByType('doctor').length,
+                        : _home.getByType('South Oakalarpa').length,
                     (index) => Container(
                       width: 10,
                       height: 10,

@@ -71,7 +71,7 @@ class _BookingPageState extends State<BookingPage> {
                       height: 10,
                     ),
                     Text(
-                      "ဝန်ဆောင်မှုရယမည့်လိပ်စာအားရေးပါ",
+                      "လာရောက်ကြည့်ရှုမည့် အချိန်",
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -210,14 +210,14 @@ class _BookingPageState extends State<BookingPage> {
                     Row(
                       children: [
                         Text(
-                          "Address",
+                          "Information",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         SizedBox(width: 10),
-                        Icon(Icons.home),
+                        Icon(Icons.person),
                       ],
                     ),
                     SizedBox(
@@ -228,7 +228,7 @@ class _BookingPageState extends State<BookingPage> {
                       onChanged: homeController.setAddress,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'Address',
+                        hintText: 'Email',
                       ),
                     ),
                     SizedBox(

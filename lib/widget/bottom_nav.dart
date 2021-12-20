@@ -61,7 +61,7 @@ class BottomNav extends StatelessWidget {
             ),
             GButton(
               icon: LineIcons.clipboardList,
-              text: 'Check Out',
+              text: 'Booking',
             ),
             GButton(
               icon: LineIcons.user,

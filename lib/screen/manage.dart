@@ -22,7 +22,7 @@ class ManagePage extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Manage Expert",
+          "Manage Property",
           style: TextStyle(
             color: Colors.black,
           ),

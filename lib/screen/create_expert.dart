@@ -13,6 +13,8 @@ class CreateExpertPage extends StatefulWidget {
 class _CreateExpertPageState extends State<CreateExpertPage> {
   final GlobalKey<FormState> _globalKey = GlobalKey();
   final ExpertController _expertController = Get.find();
+  final ExpertController _expertController2 = Get.find();
+  final ExpertController _expertController3 = Get.find();
   final HomeController _home = Get.find();
 
   @override
@@ -36,7 +38,7 @@ class _CreateExpertPageState extends State<CreateExpertPage> {
         ),
         title: Obx(
           () => Text(
-            _expertController.id.isNotEmpty ? "Edit Expert" : "Create Expert",
+            _expertController.id.isNotEmpty ? "Edit Property" : "Create Property",
             style: TextStyle(
               color: Colors.black,
             ),
@@ -67,6 +69,34 @@ class _CreateExpertPageState extends State<CreateExpertPage> {
               SizedBox(
                 height: 20,
               ),
+
+              TextFormField(
+                controller: _expertController2.photolink2,
+                focusNode: _expertController2.photolink2FocusNode,
+                onFieldSubmitted: (_) =>
+                    _expertController.nameFocusNode.requestFocus(),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Photo Link 2",
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+
+              TextFormField(
+                controller: _expertController3.photolink3,
+                focusNode: _expertController3.photolink3FocusNode,
+                onFieldSubmitted: (_) =>
+                    _expertController.nameFocusNode.requestFocus(),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Photo Link 3",
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
               // 'name': name,
               TextFormField(
                 controller: _expertController.name,
@@ -75,7 +105,7 @@ class _CreateExpertPageState extends State<CreateExpertPage> {
                     _expertController.typeFocusNode.requestFocus(),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "Name",
+                  hintText: "အမည်",
                 ),
               ),
               SizedBox(
@@ -90,7 +120,7 @@ class _CreateExpertPageState extends State<CreateExpertPage> {
                     _expertController.descriptionFocusNode.requestFocus(),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "Type",
+                  hintText: "မြို့နယ်",
                 ),
               ),
               SizedBox(
@@ -105,7 +135,7 @@ class _CreateExpertPageState extends State<CreateExpertPage> {
                     _expertController.jobFocusNode.requestFocus(),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "Description",
+                  hintText: "အကြောင်းအရာများ",
                 ),
               ),
               SizedBox(
@@ -120,7 +150,7 @@ class _CreateExpertPageState extends State<CreateExpertPage> {
                     _expertController.rateFocusNode.requestFocus(),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "Job",
+                  hintText: "Area",
                 ),
               ),
               SizedBox(
@@ -135,7 +165,7 @@ class _CreateExpertPageState extends State<CreateExpertPage> {
                     _expertController.ratingFocusNode.requestFocus(),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "Rate",
+                  hintText: "Price / Month",
                 ),
               ),
               SizedBox(
@@ -150,12 +180,43 @@ class _CreateExpertPageState extends State<CreateExpertPage> {
                     _expertController.jobTitleFocusNode.requestFocus(),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "Rating",
+                  hintText: "Number of BedRoom",
                 ),
               ),
               SizedBox(
                 height: 20,
               ),
+
+              TextFormField(
+                controller: _expertController2.rating2,
+                focusNode: _expertController2.rating2FocusNode,
+                onFieldSubmitted: (_) =>
+                    _expertController2.jobTitleFocusNode.requestFocus(),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Number of BathRoom",
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+
+              TextFormField(
+                controller: _expertController.propertyAddress,
+                focusNode: _expertController.propertyAddressFocusNode,
+                onFieldSubmitted: (_) =>
+                    _expertController.propertyAddressFocusNode.requestFocus(),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Property Address",
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+
+
+
 
               // 'jobTitle': jobTitle,
               TextFormField(
@@ -165,7 +226,7 @@ class _CreateExpertPageState extends State<CreateExpertPage> {
                     _expertController.jobDescriptionFocusNode.requestFocus(),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "Job Title",
+                  hintText: "အခြားပါဝင်သော အချက် ( ၁ )",
                 ),
               ),
               SizedBox(
@@ -182,7 +243,7 @@ class _CreateExpertPageState extends State<CreateExpertPage> {
                 },
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "Job Description",
+                  hintText: "အခြားပါဝင်သော အချက် ( ၂ )",
                 ),
               ),
               SizedBox(

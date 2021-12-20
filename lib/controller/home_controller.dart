@@ -1,16 +1,13 @@
 import 'dart:async';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:kozarni_appointment/data/constant.dart';
 import 'package:kozarni_appointment/model/expert.dart';
 import 'package:kozarni_appointment/model/purchase.dart';
 import 'package:kozarni_appointment/model/user.dart';
-import 'package:kozarni_appointment/service/api.dart';
 import 'package:kozarni_appointment/service/auth.dart';
 import 'package:kozarni_appointment/service/database.dart';
 
@@ -169,14 +166,21 @@ class HomeController extends GetxController {
     } catch (e) {
       return ExpertModel(
           photolink: '',
+          photolink2: '',
+          photolink3: '',
           name: '',
           type: '',
           description: '',
           job: '',
           rate: '',
           rating: '',
+          rating2: '',
           jobTitle: '',
-          jobDescription: '');
+          jobDescription: '',
+          propertyAddress: '',
+
+
+      );
     }
   }
 
