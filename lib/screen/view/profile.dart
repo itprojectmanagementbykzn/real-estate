@@ -31,7 +31,7 @@ class LogoutUser extends GetView<HomeController> {
       padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10),
       child: CachedNetworkImage(
       imageUrl:
-      'https://i.ibb.co/TkLNSby/app-icon.png',
+      'https://kzn.fra1.cdn.digitaloceanspaces.com/Project_Management_Course_Photos/appicon.png',
         height: 120,
       ),
     ),
