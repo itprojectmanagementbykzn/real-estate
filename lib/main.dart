@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: createExpertPage,
+      initialRoute: homePage,
       initialBinding: TemplateBinding(),
       getPages: routes,
     );
