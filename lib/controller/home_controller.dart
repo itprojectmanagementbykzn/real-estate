@@ -117,14 +117,14 @@ class HomeController extends GetxController {
       }
       if (_ != null) {
         ///To create admin role
-        // await _database.write(
-        //   userCollection,
-        //   path: _.uid,
-        //   data: {
-        //     'uid': _.uid,
-        //     'role': 'admin',
-        //   },
-        // );
+        await _database.write(
+          userCollection,
+          path: _.uid,
+          data: {
+            'uid': _.uid,
+            'role': 'admin',
+          },
+        );
         final DocumentSnapshot<Map<String, dynamic>> _userData =
             await _database.read(userCollection, path: _.uid);
         authorized.value = true;

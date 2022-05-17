@@ -96,7 +96,7 @@ class _LoginUser extends StatelessWidget {
                     // borderRadius: BorderRadius.circular(100),
                     child: CachedNetworkImage(
                       imageUrl:
-                          'https://i.ibb.co/TkLNSby/app-icon.png',
+                          'https://kzn.fra1.cdn.digitaloceanspaces.com/Project_Management_Course_Photos/appicon.png',
                       height: 100,
                       fit: BoxFit.cover,
                     ),

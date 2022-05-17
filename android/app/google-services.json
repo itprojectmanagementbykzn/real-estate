@@ -1,41 +1,70 @@
 {
   "project_info": {
-    "project_number": "489290342837",
-    "project_id": "realestate-ac1e5",
-    "storage_bucket": "realestate-ac1e5.appspot.com"
+    "project_number": "303315255472",
+    "project_id": "kzn-real-estate-app-e8c54",
+    "storage_bucket": "kzn-real-estate-app-e8c54.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:489290342837:android:4471a4ebe7a941698df9fc",
+        "mobilesdk_app_id": "1:303315255472:android:cd4e36bd122e3c4c48bb75",
         "android_client_info": {
-          "package_name": "com.kzn.realestate"
+          "package_name": "com.kzn.realestateapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "489290342837-bgh9aqo7e8o5731h77lksoo0uqe4na1l.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.kzn.realestate",
-            "certificate_hash": "af4d0b5361a2a297b8e64315787e0db3da16aaf9"
-          }
-        },
-        {
-          "client_id": "489290342837-dak9cvrl3vjvurtjvpdijlr1l54fsmuc.apps.googleusercontent.com",
+          "client_id": "303315255472-s0msnk9bh5lr2uf0pu2u4b1jrb3h6dqq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCtCC01IPvDggUnQn5SNaEFRxHgpkzpxDE"
+          "current_key": "AIzaSyDThU4vbtOI-DjtPOfqKGNn3WE8NwWrBsE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "489290342837-dak9cvrl3vjvurtjvpdijlr1l54fsmuc.apps.googleusercontent.com",
+              "client_id": "303315255472-s0msnk9bh5lr2uf0pu2u4b1jrb3h6dqq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303315255472:android:084c33c9fe39c77d48bb75",
+        "android_client_info": {
+          "package_name": "com.kzn.realestatedemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303315255472-115gv2kqsbi649o932t0fvepl9s37cne.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kzn.realestatedemo",
+            "certificate_hash": "e17daea38df4a03ba76494856f8094fe5d27d6f8"
+          }
+        },
+        {
+          "client_id": "303315255472-s0msnk9bh5lr2uf0pu2u4b1jrb3h6dqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDThU4vbtOI-DjtPOfqKGNn3WE8NwWrBsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303315255472-s0msnk9bh5lr2uf0pu2u4b1jrb3h6dqq.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
